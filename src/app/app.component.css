@@ -1,0 +1,48 @@
+#header {
+    background-color: #F4F2F2;
+}
+
+.sea-card {
+ 
+    padding-top: 40px;
+    margin: 0 auto;
+    width:100%;
+    line-height: 1.5rem;
+    max-width: 1250px;
+    background: white;
+    box-shadow: 0px 0px 12px 0px  rgba(0, 0, 0, .8);
+    margin: 0 auto;
+    border-radius: 4px;
+    padding: 20px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    position: relative;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+#filters {
+    background-color:#fcfcfc;
+    margin-bottom: -2%;
+    margin-top: 50px;
+    margin-right: 390px;
+    margin-left: 390px;
+    height:100px;
+    z-index: 0;
+    box-shadow: 1px 0px 7px 0px rgba(0, 0, 0, .8);
+    /* border-radius: 15px; */
+}
+
+.ui.icon.basic.button { 
+    margin: 15px 0 20px 18px;
+    font-size: 18px;
+    color: #446579 !important;
+    box-shadow: 0px 0px 0px 1px rgba(0, 130, 208, 1) inset;
+}
+
+
+.cover {
+    background: url(../assets/images/class.jpg) no-repeat center  #1b1918;
+    background-size: 100%;
+    height: 100%
+}
