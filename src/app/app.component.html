@@ -16,48 +16,90 @@
 <div class="ui centered grid">
   <div
     class="row"
-    id="filters"
+    id="data-selector-area"
   >
-    <div class="ui secondary large menu">
-      <div class="item">
-        <h4 class="ui header">
-          <div class="content">
-            הצגת נתונים על-פי &nbsp;
-            <div class="ui buttons">
-              <button class="ui basic red button">כיתה</button>
-              <button class="ui basic blue button">מקצוע</button>
-              <button class="ui basic green button">התאמה</button>
-            </div>
-          </div>
-        </h4>
-      </div>
+    <h4 class="ui header">
+      <div class="content">
+        מציג התאמות עבור תלמידים &nbsp;
+        <sui-select
+          class="ui floating dropdown data-selector"
+          [(ngModel)]="displayCategory"
+          [options]="displayOptions"
+          labelField="name"
+          placeholder="בחרי קטגוריית תצוגה"
+          #selectDisplay
+        >
+          <sui-select-option
+            *ngFor="let option of selectDisplay.filteredOptions"
+            [value]="option"
+          ></sui-select-option>
+            </sui-select>
+            <sui-select
+              class="ui floating dropdown data-selector"
+              [(ngModel)]="classCategory"
+              [options]="classOptions"
+              labelField="name"
+              placeholder="כיתה..."
+              #selectClass
+            >
+              <sui-select-option
+                *ngFor="let option of selectClass.filteredOptions"
+                [value]="option"
+              >
+                </sui-select-option>
+                </sui-select>
 
-      <div class="item">
-        <div class="ui compact menu">
-          <div class="ui simple dropdown item">
-            כיתה
-            <i class="dropdown icon"></i>
-            <div class="menu">
-              <div class="item">יא1</div>
-              <div class="item">יא2</div>
-              <div class="item">יא3</div>
-            </div>
-          </div>
-        </div>
-
       </div>
-      <div class="item">
-        <div class="ui icon input">
-          <input
-            type="text"
-            placeholder="שם תלמיד או תעודת זהות...."
-          >
-            <i class="search link icon"></i>
-        </div>
-      </div>
-    </div>
+    </h4>
 </div>
 <div class="row">
+  <div class="col-2">
+    <div
+      class="sea-card"
+      id="filters"
+    >
+      <div>
+        <sui-search
+          placeholder="שם או תעודת זהות..."
+          [hasIcon]="true"
+          [searchDelay]="0"
+        ></sui-search>
+      </div>
+      <div class="ui divider"></div>
+      <div>
+        <sui-multi-select
+          [(ngModel)]="helperFilter"
+          [options]="helperOptions"
+          labelField="name"
+          placeholder="התאמות"
+          [maxSelected]="5"
+          icon="columns icon"
+          #selectHelpers
+        >
+          <div class="ui icon search input">
+            <i class="search icon"></i>
+            <input
+              suiSelectSearch
+              type="text"
+              placeholder="התאמה..."
+            >
+          </div>
+          <div class="divider"></div>
+          <div class="header">
+            <i class="list icon"></i> התאמות
+          </div>
+          <div class="scrolling menu">
+            <sui-select-option
+              *ngFor="let o of selectHelpers.filteredOptions"
+              [value]="o"
+            ></sui-select-option>
+          </div>
+          </sui-multi-select>
+      </div>
+
+  </div>
+</div>
+<div class="col-10">
   <div class="sea-card">
     <table class="ui table">
       <thead>
@@ -164,4 +206,15 @@
   </div>
 </div>
 </div>
-</div>
+<div
+  class="row"
+  id="footer-area"
+>
+  <h3>מספר תלמידים: <span>10</span></h3>
+  <button class="ui basic button">
+  הוספת תלמיד/ה &nbsp;
+  <i class="icon plus"></i>
+  </button>
+
+  </div>
+  </div>

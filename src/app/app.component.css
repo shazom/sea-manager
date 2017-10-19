@@ -22,15 +22,35 @@
 }
 
 #filters {
+    
+}
+
+#data-selector-area {
     background-color:#fcfcfc;
-    margin-bottom: -2%;
+    margin-bottom: -1%;
     margin-top: 50px;
     margin-right: 390px;
     margin-left: 390px;
-    height:100px;
-    z-index: 0;
+    /* height:100px; */
+    z-index: 1;
     box-shadow: 1px 0px 7px 0px rgba(0, 0, 0, .8);
     /* border-radius: 15px; */
+}
+
+#footer-area {
+    background-color:#fcfcfc;
+    margin-top: -1%;
+    margin-right: 390px;
+    margin-left: 390px;
+    /* height:100px; */
+    box-shadow: 1px 0px 7px 0px rgba(0, 0, 0, .8);
+    text-align: right;
+    /* border-radius: 15px; */
+}
+
+.data-selector {
+    width: 6em;
+    min-width: 5em !important;
 }
 
 .ui.icon.basic.button { 

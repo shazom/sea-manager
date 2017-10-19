@@ -1,0 +1,38 @@
+ <div class="ui secondary large menu">
+      <div class="item">
+        <h4 class="ui header">
+          <div class="content">
+            הצגת נתונים על-פי &nbsp;
+            <div class="ui buttons">
+              <button class="ui basic red button">כיתה</button>
+              <button class="ui basic blue button">מקצוע</button>
+              <button class="ui basic green button">התאמה</button>
+            </div>
+          </div>
+        </h4>
+      </div>
+
+      <div class="item">
+        <div class="ui compact menu">
+          <div class="ui simple dropdown item">
+            כיתה
+            <i class="dropdown icon"></i>
+            <div class="menu">
+              <div class="item">יא1</div>
+              <div class="item">יא2</div>
+              <div class="item">יא3</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="item">
+        <div class="ui icon input">
+          <input
+            type="text"
+            placeholder="שם תלמיד או תעודת זהות...."
+          >
+            <i class="search link icon"></i>
+        </div>
+      </div>
+    </div>
