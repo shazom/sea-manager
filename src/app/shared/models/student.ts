@@ -6,7 +6,7 @@ export interface Student {
   privateName: string;
   lastName: string;
   classId: number;
-  curriculumId: number;
+  subjectsIds: number[];
   zeroSeven?: string;
   diagnosis: {
     isExists: boolean;
@@ -20,6 +20,7 @@ export interface Student {
     isExists: boolean;
     description: string;
   };
+  helpersDiagnosis: Helper[];
   helpersSchool: Helper[];
   helpersBagrut: Helper[];
   comments: string;
